@@ -10,13 +10,11 @@ export default class PopupWindow extends Component {
     show: false
   }
   componentDidMount() {
-    console.log('did mount?')
     setTimeout(() => {
-      console.log('will update state')
       this.setState({
         show: true
-      }, () => console.log('show state'))
-    }, 3000);
+      })
+    }, 3000)
   }
   render() {
     return this.state.show ? (
@@ -27,7 +25,7 @@ export default class PopupWindow extends Component {
           </Text>
         </View>
       </View>
-    ) : <View />
+    ) : null
   }
 }
 
@@ -35,10 +33,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'transparent',
+    justifyContent: 'center',
+    backgroundColor: 'green',
   },
   text: {
-    paddingTop: 20,
     color: 'white',
+    width: 300,
+    height: 240,
+    textAlign: 'center',
+    backgroundColor: 'orange',
+    borderRadius: 10,
   }
 })

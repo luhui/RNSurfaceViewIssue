@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React, { Component } from 'react'
 import {
   requireNativeComponent,
   View,
@@ -15,4 +15,12 @@ var iface = {
   },
 };
 
-export default requireNativeComponent('SurfaceView', iface)
+const SurfaceView = requireNativeComponent('SurfaceView', iface)
+
+export default SurfaceView
+
+const styles = StyleSheet.create({
+  text:{
+    color: 'green'
+  }
+})
