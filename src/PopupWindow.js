@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import {
-  View,
+  StyleSheet,
   Text,
-  StyleSheet
+  TouchableWithoutFeedback,
+  View
 } from 'react-native'
 
 export default class PopupWindow extends Component {
@@ -17,12 +18,23 @@ export default class PopupWindow extends Component {
     }, 3000)
   }
   render() {
+    console.log('render ' + this.state.show)
     return this.state.show ? (
       <View style={StyleSheet.absoluteFill}>
         <View style={styles.container}>
-          <Text style={styles.text}>
-            "Hi a Text"
-          </Text>
+          <TouchableWithoutFeedback onPress={() => {
+              console.log('on click')
+              this.setState({
+                show: false
+                }, () => setTimeout(() => this.setState({show: true}), 3000)
+              )}
+            }>
+            <View>
+              <Text style={styles.text}>
+              "Hi a Text"
+              </Text>
+            </View>
+          </TouchableWithoutFeedback>
         </View>
       </View>
     ) : null
@@ -34,7 +46,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'green',
+    backgroundColor: 'transparent',
   },
   text: {
     color: 'white',

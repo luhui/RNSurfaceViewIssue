@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
 import {
-  View,
+  Dimensions,
   StyleSheet,
-  Dimensions
+  View
 } from 'react-native'
-import SurfaceView from './SurfaceView'
+import React, { Component } from 'react'
+
 import PopupWindow from './PopupWindow'
+import SurfaceView from './SurfaceView'
 
 export default class SampleApp extends Component {
   render() {
@@ -19,9 +20,9 @@ export default class SampleApp extends Component {
 }
 
 const styles = StyleSheet.create({
-  // container: { //error style
-  //   flex: 1,
-  //   backgroundColor: 'red'
-  // },
-  container: StyleSheet.absoluteFillObject
+  container: { //error style
+    flex: 1,
+    backgroundColor: 'red'
+  },
+  // container: StyleSheet.absoluteFillObject
 })
