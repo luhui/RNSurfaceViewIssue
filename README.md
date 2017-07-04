@@ -1,6 +1,6 @@
 # View render issue when using surfaceview in react-native
 
-#facebook/react-native##14818
+issue [facebook/react-native#14818](https://github.com/facebook/react-native/issues/14818)
 
 There is a compatible render issue when using surfaceview and flexbox.
 
