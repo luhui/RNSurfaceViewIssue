@@ -20,13 +20,9 @@ export default class SampleApp extends Component {
 }
 
 const styles = StyleSheet.create({
-//   container: { //error style with flexbox
-//     flex: 1,
-//     backgroundColor: 'red'
-//   },
-//   container: { //error style with shadow
-//       ...StyleSheet.absoluteFillObject,
-//       shadowColor: 'black',
-//   }
+  // container: { //error style
+  //   flex: 1,
+  //   backgroundColor: 'red'
+  // },
   container: StyleSheet.absoluteFillObject
 })
